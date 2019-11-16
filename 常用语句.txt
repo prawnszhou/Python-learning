@@ -1,0 +1,21 @@
+1. 更新到GitHub内容
+推送你的新分支与数据到某个远端仓库命令:
+git push [alias] [branch]
+以上命令将你的 [branch] 分支推送成为 [alias] 远程仓库上的 [branch] 分支，实例如下。
+$ touch runoob-test.txt      # 添加文件
+$ git add runoob-test.txt 
+$ git commit -m "添加到远程"
+master 69e702d] 添加到远程
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 runoob-test.txt
+
+$ git push origin master    # 推送到 Github 
+
+2. 同步GitHub更新
+Git 有两个命令用来提取远程仓库的更新。
+1、从远程仓库下载新分支与数据：
+git fetch
+该命令执行完后需要执行git merge 远程分支到你所在的分支。
+2、从远端仓库提取数据并尝试合并到当前分支：
+git merge
+该命令就是在执行 git fetch 之后紧接着执行 git merge 远程分支到你所在的任意分支。
